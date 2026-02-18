@@ -20,10 +20,10 @@
         </div>
         <div class="inputbox">
             <label>Password</label>
-            <input type="text" name="password" placeholder="Masukan Password" required>
+            <input type="password" name="password" placeholder="Masukan Password" required>
         </div>
             <button type="submit">Login</button>
-
+            <p>Belum Punya Akun?<a href="register.php">Daftar Sekarang</a></p>
        </form> 
 
     </div>
