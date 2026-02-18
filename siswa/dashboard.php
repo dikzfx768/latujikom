@@ -1,6 +1,6 @@
 <?php 
 session_start();
-if ($_SESSION['role'] != 'admin') {
+if ($_SESSION['role'] != 'siswa') {
     header("location:../index.php");
 }
 
@@ -11,7 +11,7 @@ if ($_SESSION['role'] != 'admin') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Admin</title>
+    <title>Halaman Siswa</title>
 </head>
 <body>
      <div class="navbar">
@@ -22,18 +22,13 @@ if ($_SESSION['role'] != 'admin') {
     
     <div class="kotak">
         <div class="logo">📖</div>
-        <p class="header">Kelola Buku Perpustakaan</p>
+        <p class="header">Pinjam Buku Perpustakaan</p>
         <a href="buku.php">Masuk</a>
     </div>
     <div class="kotak">
-        <div class="logo">🎭</div>
-        <p class="header">Kelola Pengguna Perpustakaan</p>
-        <a href="user.php">Masuk</a>
-    </div>
-    <div class="kotak">
-        <div class="logo">📜</div>
-        <p class="header">Kelola Transaksi Perpustakaan</p>
-        <a href="transaksi.php">Masuk</a>
+        <div class="logo">📚</div>
+        <p class="header">Pinjaman Saya</p>
+        <a href="pinjaman_saya.php">Masuk</a>
     </div>
 
     <a href="../back_end/logout.php">Logout</a>
