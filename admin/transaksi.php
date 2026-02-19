@@ -1,16 +1,17 @@
 <?php 
 session_start();
 include '../back_end/koneksi.php';
-if ($_SESSION['role'] != 'siswa') {
+if ($_SESSION['role'] != 'admin') {
     header("location:../index.php");
     }
     
-    $id_user = $_SESSION['id_user'];
+
     $no = 1;
-    $perintah = mysqli_query($koneksi, "SELECT peminjaman .*, buku.judul
+    $perintah = mysqli_query($koneksi, "SELECT peminjaman .*, buku.judul ,users.nama
     FROM peminjaman
     JOIN buku ON peminjaman.id_buku = buku.id_buku
-    WHERE peminjaman.id_user = '$id_user' ");
+    JOIN users ON peminjaman.id_user = users.id_user
+    ");
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +19,7 @@ if ($_SESSION['role'] != 'siswa') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pinjaman Saya</title>
+    <title>Histori Transaksi Perpustakaan</title>
 </head>
 <body>
         <div class="navbar">
@@ -30,11 +31,11 @@ if ($_SESSION['role'] != 'siswa') {
     <table border="1">
         <tr>
             <th>No</th>
+            <th>Nama</th>
             <th>Judul</th>
             <th>Tanggal_Pinjam</th>
             <th>Tanggal_Kembali</th>
-            <th>Status</th>
-            <th>Aksi</th>
+            <th>Status Buku</th>
         </tr>
 
 <?php 
@@ -42,17 +43,12 @@ if ($_SESSION['role'] != 'siswa') {
 ?>
         <tr>
             <td><?php echo $no ++;?></td>
+            <td><?php echo $data['nama'];?></td>
             <td><?php echo $data['judul'];?></td>
             <td><?php echo $data['tanggal_pinjam'];?></td>
             <td><?php echo $data['tanggal_kembali'];?></td>
             <td><?php echo $data['status'];?></td>
-            <td>
-                <?php if ($data['status'] == 'dipinjam' ) { ?>
-                    <a href="kembali.php?id=<?php echo $data['id_pinjam']; ?>&buku=<?php echo $data['id_buku'];?>">Kembalikan Buku</a>
-                <?php } else {
-                    echo "Selesai";
-                } ?> 
-            </td>
+
         </tr>
 <?php } ?>
     </table>
