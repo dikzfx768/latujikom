@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --cerah: #FFFDF1;
+    --krem: #FFCE99;
+    --oren: #FF9644;
+    --coklat: #562F00;
+
+}
+* {
+    font-family: "Montserrat", sans-serif;
+    margin: 0 0 0 0;
+    text-decoration: none;
+}
+body {
+    background-color: var(--cerah);
+  
+}
+
+.hero {
+    display: flex;
+
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+
+}
+/* NAVBAR STYLE  */
+.navbar {
+    background-color: var(--coklat);
+    width: 100%;
+    height: 70px;
+    align-items: center;
+    display: flex;
+}
+.navbar .logo {
+    font-size: 50px;
+    margin: auto 0px 50% 30px;
+}
+.navbar h1 {
+    color: var(--krem);
+    margin-left: 3rem;
+}
+
+.navbar h1 span {
+    color: var(--oren);
+}
+/* NAVBAR STYLE  */
+
+/* LOGIN FORM  */
+.card {
+    background-color: var(--coklat);
+    width: 60vh;
+    height: 60vh;
+   border: 5px solid var(--krem);
+   border-radius: 20px;
+   color: var(--krem);
+}
+.card h2 {
+    text-align: center;
+    display: block;
+    margin: 2rem 0 1.5rem 0;
+    font-size: 3rem;
+}
+
+.card p {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.card .inputbox {
+    margin: 0 4rem 1.5rem 2rem;
+    justify-content: space-between;
+    display: flex;
+}
+
+.card .inputbox label {
+    font-size: 1.5rem;
+}
+.card .inputbox input {
+    padding: 10px 50px 10px 50px ;
+    background: transparent;
+    border: 2px solid var(--krem);
+    border-radius: 10px;
+    outline: none;
+    color: var(--cerah);
+}
+
+
+.card .inputbox input::placeholder {
+    opacity: 50%;
+    color: var(--cerah);
+    align-items: center;
+    font-size: 1rem;
+    width: 100vh;
+}
+.card .button {
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+.card .button button {
+    font-weight: bold;
+    padding: 10px 4rem 10px 4rem;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: var(--coklat);
+    border: 2px solid var(--krem);
+    color: var(--oren);
+    transition: 0.5s ease;
+}
+
+.card .button button:hover {
+    transition: 0.5s ease;
+    background-color: var(--krem);
+    border: 2px solid var(--coklat);
+    color: var(--oren);
+}
+
+.card p a {
+    color: var(--cerah);
+    text-decoration: underline;
+}
+
+.card p a:hover { 
+
+    color: var(--oren);
+}
+/* LOGIN FORM  */
