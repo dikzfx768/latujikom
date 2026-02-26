@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --cerah: #FFFDF1;
+    --krem: #FFCE99;
+    --oren: #FF9644;
+    --coklat: #562F00;
+
+}
+* {
+    font-family: "Montserrat", sans-serif;
+    margin: 0 0 0 0;
+    text-decoration: none;
+}
+body {
+    background-color: var(--cerah);
+  
+}
+
+.hero {
+    display: flex;
+
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+
+}
+/* NAVBAR STYLE  */
+.navbar {
+    background-color: var(--coklat);
+    width: 100%;
+    height: 70px;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+.navbar .logo {
+    font-size: 50px;
+    margin: auto 0px 50% 30px;
+}
+.navbar h1 {
+    color: var(--krem);
+    margin-left: 3rem;
+    cursor: pointer;
+}
+
+.navbar h1 span {
+    color: var(--oren);
+}
+/* NAVBAR STYLE  */
+
+.navbar h1 {
+    color: var(--krem);
+    margin-left: 3rem;
+    cursor: pointer;
+}
+
+.navbar h1 span {
+    color: var(--oren);
+}
+
+
+
+h2 {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--krem);
+    cursor: pointer;
+    transition: ease-in 100ms;
+
+}
+ h2 span {
+    color: var(--oren);
+    transition: ease-in 100ms;
+}
+
+/* h2:hover,h2 span:hover {
+    color: var(--coklat);
+} */
+
+/* MENU */
+
+
+/* Container halaman */
+.halaman {
+    height: 50vh;
+    display: flex;
+    justify-content: center;   /* rata tengah horizontal */
+    align-items: center;       /* rata tengah vertikal (opsional) */
+    gap: 40px;                 /* jarak antar kotak */
+    flex-wrap: wrap;           /* biar responsif kalau layar kecil */
+    margin-top: 60px;
+}
+
+/* Styling kotak */
+.kotak {
+    width: 300px;
+    aspect-ratio: 1 / 1;             /* bikin 1:1 supaya kotak */
+    background-color: var(--coklat);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    color: var(--cerah);
+    border: 5px solid var(--krem);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    
+    text-align: center;
+    transition: 0.3s;
+}
+.kotak .logo {
+    font-size: 40px;
+    width: 90px;
+    aspect-ratio: 1 / 1;
+    border: 4px solid var(--krem);
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 20px 0 40px 0;
+}
+/* Efek hover biar lebih hidup */
+.kotak:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    border-color: var(--oren);
+}
+
+/* Styling link */
+.kotak a {
+    text-decoration: none;
+    background-color: var(--krem);
+    color: var(--oren);
+    padding: 8px 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.kotak a:hover {
+    font-size: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    color: var(--coklat);
+    background-color: var(--oren);
+    
+}
+
+.logout {
+   opacity: 30%;
+   transition: 0.3s;
+   color: var(--coklat);
+}
+.logout:hover {
+   opacity: 70%;
+}
+/* MENU */
