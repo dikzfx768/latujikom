@@ -93,7 +93,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 INSERT INTO `users` (`id_user`, `nama`, `username`, `password`, `role`) VALUES
 (1, 'Si Atmin Baik', 'admin', '1', 'admin'),
-(3, 'Didik Saepudin', 'Dikz', 'Gakjalu76', 'siswa');
+(3, 'Siswa Teladan', 'siswa', '123', 'siswa');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
