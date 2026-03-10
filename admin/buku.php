@@ -14,36 +14,50 @@ $no = 1;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buku Perpustakaan</title>
+    <link rel="stylesheet" href="../style/buku.css">
 </head>
 <body>
-        <div class="navbar">
-        <h1>📖Perpustakaan <span> EdinBurg School</span>🏫</h1>
+    <div class="navbar">
+        <h1>Perpustakaan <span>EdinBurg School</span></h1>
+    </div>
+    
+    <div class="container">
+        
+        <!-- LEFT : FORM -->
+        <div class="glass-card form-section">
+            <h2>Tambah Buku</h2>
+            
+            <form action="tambah_buku.php" method="post">
+                <div class="inputbox">
+                    <label>Judul Buku</label>
+                    <input type="text" name="judul" required>
+                </div>
+                
+                <div class="inputbox">
+                    <label>Stok Buku</label>
+                    <input type="number" name="stok" min="1" required>
+                </div>
+                
+                <button type="submit">Tambah</button>
+            </form>
+            <h2><a href="dashboard.php" class="logout">Kembali Ke Menu</a></h2>
     </div>
 
-    <div class="card">
-        <h2>Login</h2>
-        <p>Silahkan Login Terlebih Dahulu</p>
-       <form action="tambah_buku.php" method="post">
-        <div class="inputbox">
-            <label>Judul Buku</label>
-            <input type="text" name="judul" placeholder="Masukan Judul Buku" required>
-        </div>
-        <div class="inputbox">
-            <label>Stok Buku</label>
-            <input type="number" min="1" name="stok" placeholder="Masukan Stock Buku" required>
-        </div>
-            <button type="submit">Tambah Buku</button>
-            <a href="dashboard.php">Kembali Ke Menu</a>
-       </form> 
+    <!-- RIGHT : TABLE -->
+    <div class="glass-card table-section">
+        <h2>Data Buku</h2>
 
-<div class="list">
-    <table border="1">
-        <tr>
-            <th>No</th>
-            <th>Judul</th>
-            <th>Stock</th>
-            <th>Aksi</th>
-        </tr>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Judul</th>
+                        <th>Stok</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
 
 <?php 
     $perintah = mysqli_query($koneksi, "SELECT * FROM buku");
@@ -59,7 +73,6 @@ $no = 1;
         </tr>
 <?php } ?>
     </table>
-
 </div>
 </body>
 </html>

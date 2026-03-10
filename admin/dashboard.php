@@ -12,11 +12,10 @@ if ($_SESSION['role'] != 'admin') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halaman Admin</title>
-      <link rel="stylesheet" href="../style/dashb.css">
+      <link rel="stylesheet" href="../style/dashboard.css">
 </head>
 <body>
      <div class="navbar">
-        <div class="logo">📚</div>
         <h1> Perpustakaan <span> EdinBurg School.</span></h1>
     </div>
 

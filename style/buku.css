@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(
+    140deg,
+    rgba(23, 17, 17, 1) 0%,
+    rgba(112, 115, 114, 1) 50%,
+    rgba(219, 219, 219, 1) 100%
+  );
+  color: white;
+}
+
+/* NAVBAR */
+.navbar {
+  position: relative;
+  padding: 10px 50px;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+  color: white;
+}
+
+.navbar h1 {
+  font-weight: bolder;
+  font-size: 2rem;
+}
+
+.navbar span {
+  font-weight: 600;
+}
+
+/* MAIN CONTAINER */
+.container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 20px auto;
+  display: flex;
+  gap: 30px;
+}
+
+/* GLASS CARD */
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+}
+
+/* LEFT FORM WIDTH */
+.form-section {
+  flex: 1;
+  max-width: 350px;
+}
+
+/* RIGHT TABLE WIDTH */
+.table-section {
+  flex: 2;
+}
+
+/* FORM */
+.inputbox {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputbox input {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+button {
+  padding: 8px 20px;
+  border-radius: 10px;
+  border: none;
+  background: white;
+  color: #333;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #f1f1f1;
+}
+
+/* TABLE */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+thead {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: center;
+}
+
+tbody tr:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+td a {
+  padding: 5px 12px;
+  border-radius: 8px;
+  background: #ff4d4d;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+.logout {
+  font-size: 15px;
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.logout:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .form-section {
+    max-width: 100%;
+  }
+}

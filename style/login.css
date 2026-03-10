@@ -1,132 +1,198 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-:root {
-    --cerah: #FFFDF1;
-    --krem: #FFCE99;
-    --oren: #FF9644;
-    --coklat: #562F00;
+/* Import font biar lebih clean */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
-}
 * {
-    font-family: "Montserrat", sans-serif;
-    margin: 0 0 0 0;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
+
 body {
-    background-color: var(--cerah);
-  
+  min-height: 100vh;
+  background: linear-gradient(
+    140deg,
+    rgba(23, 17, 17, 1) 0%,
+    rgba(112, 115, 114, 1) 50%,
+    rgba(219, 219, 219, 1) 100%
+  );
+  display: flex;
+  flex-direction: column;
 }
 
-.hero {
-    display: flex;
-
-    height: 90vh;
-    justify-content: center;
-    align-items: center;
-
-}
-/* NAVBAR STYLE  */
+/* NAVBAR */
 .navbar {
-    background-color: var(--coklat);
-    width: 100%;
-    height: 70px;
-    align-items: center;
-    display: flex;
-    cursor: pointer;
+  padding: 10px 50px;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+  color: white;
 }
-.navbar .logo {
-    font-size: 50px;
-    margin: auto 0px 50% 30px;
-}
+
 .navbar h1 {
-    color: var(--krem);
-    margin-left: 3rem;
-    cursor: pointer;
+  font-weight: bolder;
+  font-size: 2rem;
 }
 
-.navbar h1 span {
-    color: var(--oren);
+.navbar span {
+  font-weight: 600;
 }
-/* NAVBAR STYLE  */
 
-/* LOGIN FORM  */
+/* HERO SECTION */
+.hero {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* GLASS CARD */
 .card {
-    background-color: var(--coklat);
-    width: 60vh;
-    height: 60vh;
-   border: 5px solid var(--krem);
-   border-radius: 20px;
-   color: var(--krem);
+  width: 350px;
+  padding: 40px;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+  color: white;
 }
+
 .card h2 {
-    text-align: center;
-    display: block;
-    margin: 2rem 0 1.5rem 0;
-    font-size: 3rem;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 600;
 }
 
 .card p {
-    text-align: center;
-    margin-bottom: 1rem;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 14px;
+  opacity: 0.8;
 }
 
-.card .inputbox {
-    margin: 0 4rem 1.5rem 2rem;
-    justify-content: space-between;
-    display: flex;
+/* INPUT */
+.inputbox {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
-.card .inputbox label {
-    font-size: 1.5rem;
-}
-.card .inputbox input {
-    padding: 10px 50px 10px 50px ;
-    background: transparent;
-    border: 2px solid var(--krem);
-    border-radius: 10px;
-    outline: none;
-    color: var(--cerah);
+.inputbox label {
+  font-size: 14px;
+  margin-bottom: 5px;
 }
 
+.inputbox input {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
 
-.card .inputbox input::placeholder {
-    opacity: 50%;
-    color: var(--cerah);
-    align-items: center;
-    font-size: 1rem;
-    width: 100vh;
-}
-.card .button {
-    display: flex ;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
 }
 
-.card .button button {
-    font-weight: bold;
-    padding: 10px 4rem 10px 4rem;
-    border-radius: 10px;
-    font-size: 20px;
-    background-color: var(--coklat);
-    border: 2px solid var(--krem);
-    color: var(--oren);
-    transition: 0.5s ease;
+.inputbox input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
 }
 
-.card .button button:hover {
-    transition: 0.5s ease;
-    background-color: var(--krem);
-    border: 2px solid var(--coklat);
-    color: var(--oren);
+/* BUTTON */
+.button {
+  margin-top: 10px;
 }
 
-.card p a {
-    color: var(--cerah);
-    text-decoration: underline;
+.button button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+
+  background: white;
+  color: #333;
+  font-weight: 600;
+  transition: 0.3s ease;
 }
 
-.card p a:hover { 
-
-    color: var(--oren);
+.button button:hover {
+  background: #f1f1f1;
+  transform: translateY(-2px);
 }
-/* LOGIN FORM  */
+
+/* LINK */
+.card a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+.card p:last-child {
+  margin-top: 15px;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* CARD ANIMATION */
+.card {
+  animation: fadeInCard 0.8s ease forwards;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+@keyframes fadeInCard {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ELEMENT STAGGER */
+.card h2,
+.card p,
+.inputbox,
+.button,
+.card p:last-child {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeElement 0.6s ease forwards;
+}
+
+.card h2 {
+  animation-delay: 0.3s;
+}
+.card p {
+  animation-delay: 0.5s;
+}
+.inputbox:nth-of-type(1) {
+  animation-delay: 0.7s;
+}
+.inputbox:nth-of-type(2) {
+  animation-delay: 0.9s;
+}
+.button {
+  animation-delay: 1.1s;
+}
+.card p:last-child {
+  animation-delay: 1.3s;
+}
+
+@keyframes fadeElement {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

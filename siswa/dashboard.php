@@ -16,7 +16,7 @@ if ($_SESSION['role'] != 'siswa') {
 </head>
 <body>
       <div class="navbar">
-        <div class="logo">📚</div>
+ 
         <h1> Perpustakaan <span> EdinBurg School.</span></h1>
     </div>
 

@@ -14,6 +14,7 @@ $no = 1;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anggota Perpustakaan</title>
+    <link rel="stylesheet" href="../style/user.css">
 </head>
 <body>
         <div class="navbar">
